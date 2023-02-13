@@ -19,6 +19,7 @@ int main(int argc, char ** argv)
         auto json = padded_string::load(argv[1]);
         ondemand::parser parser;
         ondemand::document_stream docs = parser.iterate_many(json.value());
+        printf("%lu \n", docs.size_in_bytes());
         for (auto doc : docs)
         {
             Row e;
