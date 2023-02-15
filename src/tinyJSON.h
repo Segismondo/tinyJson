@@ -91,10 +91,19 @@ struct Storage
 
         std::vector<Row> new_data;
 
-        for (auto const & e : data)
+        // for (auto const & e : data)
+        // {
+        //     if (Op()(e) == value)
+        //         new_data.push_back(e);
+        // }
+
+        for (auto e = data.begin(); e < data.end(); e++)
         {
-            if (Op()(e) == value)
-                new_data.push_back(e);
+            if (Op()(*e) == value)
+            {
+                new_data.push_back(*e);
+            }
+            
         }
 
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -111,11 +120,20 @@ struct Storage
 
         columnType max = std::numeric_limits<columnType>::lowest();
 
-        for (auto const & e : data)
+        // for (auto const & e : data)
+        // {
+        //     columnType v = Op()(e);
+        //     if (v >= max)
+        //         max = v;
+        // }
+
+        for (auto e = data.begin(); e < data.end(); e++)
         {
-            columnType v = Op()(e);
+            columnType v = Op()(*e);
             if (v >= max)
+            {
                 max = v;
+            }
         }
 
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -132,11 +150,20 @@ struct Storage
 
         columnType min = std::numeric_limits<columnType>::max();
 
-        for (auto const & e : data)
+        // for (auto const & e : data)
+        // {
+        //     columnType v = Op()(e);
+        //     if (v <= min)
+        //         min = v;
+        // }
+
+        for (auto e = data.begin(); e < data.end(); e++)
         {
-            columnType v = Op()(e);
+            columnType v = Op()(*e);
             if (v <= min)
+            {
                 min = v;
+            }
         }
 
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -153,9 +180,14 @@ struct Storage
 
         columnType sum{0};
 
-        for (auto const & e : data)
+        // for (auto const & e : data)
+        // {
+        //     sum += Op()(e);
+        // }
+
+        for (auto e = data.begin(); e < data.end(); e++)
         {
-            sum += Op()(e);
+            sum += Op()(*e);
         }
 
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
