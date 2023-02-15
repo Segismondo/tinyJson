@@ -9,7 +9,7 @@ getMin : 0[µs] -> MIN: 31.4
 filterEquals : 67373[µs] -> 3620 elements left
 getSum : 3[µs] -> SUM: 2707874300
 
-#Output con iteradores
+#Output with iterators
 
 countEquals : 36104[µs] -> 45440 elements found
 filterEquals : 71853[µs] -> 9650 elements left
@@ -21,17 +21,4 @@ filterEquals : 66931[µs] -> 3620 elements left
 getSum : 3[µs] -> SUM: 2707874300
 
 
-## Performance
-
-
-## Scalability
-
-
-## Maintainability
-
-
-## API refactors
-
-
-## Features
 
