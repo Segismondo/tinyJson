@@ -10,7 +10,7 @@ filterEquals : 67373[µs] -> 3620 elements left
 getSum : 3[µs] -> SUM: 2707874300
 
 ## Performance
-
+Tried to replace the loops with iterators. The intention with that approach (in case the performance would improve) was to use find_if and lambdas to make it work faster. After several executions it showed that this approach did not improve the performance significantly so it was discarded.
 
 ## Scalability 
 Utilizar clases en lugar de structs para poder tener jerarquias y tener un codigo escalable (y mantenible tambien)
