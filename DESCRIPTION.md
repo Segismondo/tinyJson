@@ -43,9 +43,6 @@ The second one, typedefs. As Scott Meyers says: prefer alias declarations to typ
 
 Usage of noexcept function whenever possible.
 
-## API refactors
-
-
 ## Features
 
 A nice feature for the project (which would improve the performance) it is the usage of a third party library that I have already used in the past. The library is called semi_index (github.com/ot/semi_index). The goal of this is to speed-up the processing of big (and multiple) JSON files by creating a semi_index file. It generates an auxiliary file that holds the structure of the JSON files, so when you want only a subjset of the values in the document, the parser can be pointer to the positions of this values so you would not have to parse the whole document.
