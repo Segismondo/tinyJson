@@ -13,7 +13,7 @@ getSum : 3[µs] -> SUM: 2707874300
 Tried to replace the loops with iterators. The intention with that approach (in case the performance would improve) was to use find_if and lambdas to make it work faster. After several executions it showed that this approach did not improve the performance significantly so it was discarded.
 
 ## Scalability 
-Utilizar clases en lugar de structs para poder tener jerarquias y tener un codigo escalable (y mantenible tambien)
+Replace one of the structs with a class (modern C++) since it is a bit more complex and it has few things inside. This would mean that in the future it could be easier to work with it on changes (and also on maintainability below)
 
 ## Maintainability
 
