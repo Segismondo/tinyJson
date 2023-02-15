@@ -91,12 +91,6 @@ struct Storage
 
         std::vector<Row> new_data;
 
-        // for (auto const & e : data)
-        // {
-        //     if (Op()(e) == value)
-        //         new_data.push_back(e);
-        // }
-
         for (auto e = data.begin(); e < data.end(); e++)
         {
             if (Op()(*e) == value)
@@ -119,13 +113,6 @@ struct Storage
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
         columnType max = std::numeric_limits<columnType>::lowest();
-
-        // for (auto const & e : data)
-        // {
-        //     columnType v = Op()(e);
-        //     if (v >= max)
-        //         max = v;
-        // }
 
         for (auto e = data.begin(); e < data.end(); e++)
         {
@@ -150,13 +137,6 @@ struct Storage
 
         columnType min = std::numeric_limits<columnType>::max();
 
-        // for (auto const & e : data)
-        // {
-        //     columnType v = Op()(e);
-        //     if (v <= min)
-        //         min = v;
-        // }
-
         for (auto e = data.begin(); e < data.end(); e++)
         {
             columnType v = Op()(*e);
@@ -179,11 +159,6 @@ struct Storage
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
         columnType sum{0};
-
-        // for (auto const & e : data)
-        // {
-        //     sum += Op()(e);
-        // }
 
         for (auto e = data.begin(); e < data.end(); e++)
         {
